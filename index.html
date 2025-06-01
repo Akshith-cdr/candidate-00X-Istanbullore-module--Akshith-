@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IstanbulLore - Stories of the City</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="logo">IstanbulLore</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#stories"><i class="fas fa-book-open"></i> Stories</a></li>
+                    <li><a href="#submit"><i class="fas fa-pen-fancy"></i> Submit</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>Discover Istanbul's Hidden Stories</h1>
+                <p>A canvas for the city's tales, histories, and cultural insights</p>
+                <div class="search-container">
+                    <input type="text" placeholder="Search stories..." id="search-input" aria-label="Search stories">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="stories" class="story-grid">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Recent Stories</h2>
+                    <div class="category-filter">
+                        <select id="category-select">
+                            <option value="all">All Categories</option>
+                            <option value="history">History</option>
+                            <option value="culture">Culture</option>
+                            <option value="architecture">Architecture</option>
+                            <option value="personal">Personal</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid">
+                    <!-- Story cards will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="submit" class="submit-section">
+            <div class="container">
+                <h2>Share Your Istanbul Story</h2>
+                <form id="lore-form" class="lore-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Story Title</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" name="category" required>
+                          <option value="" disabled selected>Select a category...</option>
+                          <option value="history">History</option>
+                          <option value="culture">Culture</option>
+                          <option value="architecture">Architecture</option>
+                          <option value="personal">Personal</option>
+                        </select>
+                      </div>
+                    <div class="form-group">
+                        <label for="body">Your Story</label>
+                        <textarea id="body" name="body" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Submit Story</button>
+                </form>
+                <div id="thank-you" class="thank-you-message hidden">
+                    <h3>Thank You for Sharing!</h3>
+                    <p>Your submission will be reviewed and added to our collection.</p>
+                    <button id="submit-another" class="btn-ghost">Submit Another Story</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About IstanbulLore</h3>
+                    <p>Preserving and sharing the stories of Istanbul's rich history and culture.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#stories">Stories</a></li>
+                        <li><a href="#submit">Submit</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>info@istanbullore.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">© 2023 <a class="web-link" href="https://www.istanbullore.com/">IstanbulLore.com</a> - Stories of the City</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
